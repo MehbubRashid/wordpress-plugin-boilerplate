@@ -158,10 +158,10 @@ class Plugin_Name {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
 		// Function for automatically updating this plugin
-		$this->loader->add_filter( 'auto_update_plugin', $plugin_admin, 'auto_update_plugin_name', 10, 2 );
+		$this->loader->add_filter( 'auto_update_plugin', $plugin_admin, 'allow_auto_update', 10, 2 );
 
 		// Check if plugin was updated
-		$this->loader->add_action('plugins_loaded', $plugin_admin, 'if_plugin_name_updated');
+		$this->loader->add_action('plugins_loaded', $plugin_admin, 'if_plugin_updated');
 	}
 
 	/**

@@ -102,7 +102,7 @@ class Plugin_Name_Admin {
 
 
 	// Function for automatically updating this plugin
-	public function auto_update_plugin_name( $update, $item ) {
+	public function allow_auto_update( $update, $item ) {
 		// Array of plugin slugs to always auto-update
 		$plugins = array (
 			'plugin-name'
@@ -115,7 +115,7 @@ class Plugin_Name_Admin {
 	}
 
 	// Execute this function after the plugin is updated
-	public function if_plugin_name_updated() {
+	public function if_plugin_updated() {
 		if(get_option('Plugin_Name_Version') !== PLUGIN_NAME_VERSION) {
 			// Plugin has been updated
 

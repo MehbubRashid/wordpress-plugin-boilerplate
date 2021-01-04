@@ -99,9 +99,14 @@ class Plugin_Name_Admin {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/plugin-name-admin.js', array( 'jquery' ), null, true );
 
 	}
-
-
-	// Function for automatically updating this plugin
+	
+	/**
+	 * Function for automatically updating this plugin.
+	 *
+	 * @param mixed $update
+	 * @param mixed $item
+	 * @return void
+	 */
 	public function allow_auto_update( $update, $item ) {
 		// Array of plugin slugs to always auto-update
 		$plugins = array (
@@ -114,7 +119,11 @@ class Plugin_Name_Admin {
 		}
 	}
 
-	// Execute this function after the plugin is updated
+	/**
+	 * Check if plugin updated to a new version.
+	 *
+	 * @return void
+	 */
 	public function if_plugin_updated() {
 		if(get_option('Plugin_Name_Version') !== PLUGIN_NAME_VERSION) {
 			// Plugin has been updated

@@ -112,9 +112,11 @@ class Plugin_Name_Admin {
 		$plugins = array (
 			'plugin-name'
 		);
+		
 		if ( in_array( $item->slug, $plugins ) ) {
 			return true;
-		} else {
+		} 
+		else {
 			return $update;
 		}
 	}

@@ -38,6 +38,12 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'PLUGIN_NAME_VERSION', '1.0.0' );
 
 /**
+ * Define plugin path and plugin url.
+ */
+define( 'PLUGIN_NAME_PATH', plugin_dir_path( __FILE__ ) );
+define( 'PLUGIN_NAME_URL', plugin_dir_url( __FILE__ ) );
+
+/**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-plugin-name-activator.php
  */

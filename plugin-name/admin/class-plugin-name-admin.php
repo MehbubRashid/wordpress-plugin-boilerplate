@@ -52,6 +52,30 @@ class Plugin_Name_Admin {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
+		$this->include_partials();
+		$this->setup_hooks();
+
+	}
+
+	/**
+	 * Include partial classes.
+	 *
+	 * @return void
+	 */
+	public function include_partials() {
+		// Menu handler class
+		require_once PLUGIN_NAME_PATH . 'admin/partials/class-plugin-name-menu-handler.php';
+	}
+
+	/**
+	 * Setup all action and filter hooks.
+	 *
+	 * @return void
+	 */
+	public function setup_hooks() {
+		// Admin menu
+		$menu_handler = new Plugin_Name_Menu_Handler();
+		add_action( 'admin_menu', array( $menu_handler, 'register_menu_items' ) );
 	}
 
 	/**

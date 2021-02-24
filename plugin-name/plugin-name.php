@@ -35,41 +35,37 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'PLUGIN_NAME_VERSION', '1.0.0' );
+define( 'PREFIX_VERSION', '1.0.0' );
 
 /**
  * Define plugin path and plugin url.
  */
-define( 'PLUGIN_NAME_PATH', plugin_dir_path( __FILE__ ) );
-define( 'PLUGIN_NAME_URL', plugin_dir_url( __FILE__ ) );
+define( 'PREFIX_PATH', plugin_dir_path( __FILE__ ) );
+define( 'PREFIX_URL', plugin_dir_url( __FILE__ ) );
+define( 'PREFIX_ASSETS_URL', plugin_dir_url( __FILE__ ) . 'assets/dist/' );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-plugin-name-activator.php
  */
-function plugin_name_activate() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-activator.php';
-	Plugin_Name_Activator::activate();
-	add_option('Plugin_Name_Version', PLUGIN_NAME_VERSION);
+function prefix_activate() {
+	
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-plugin-name-deactivator.php
  */
-function plugin_name_deactivate() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-deactivator.php';
-	Plugin_Name_Deactivator::deactivate();
+function prefix_deactivate() {
+	
 }
 
-register_activation_hook( __FILE__, 'plugin_name_activate' );
-register_deactivation_hook( __FILE__, 'plugin_name_deactivate' );
+register_activation_hook( __FILE__, 'prefix_activate' );
+register_deactivation_hook( __FILE__, 'prefix_deactivate' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-plugin.php';
 
 /**
  * Begins execution of the plugin.
@@ -80,10 +76,9 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name.php';
  *
  * @since    1.0.0
  */
-function plugin_name_run() {
+function prefix_run() {
 
-	$plugin = new Plugin_Name();
-	$plugin->run();
+	$plugin = new Prefix_Plugin();
 
 }
-plugin_name_run();
+prefix_run();

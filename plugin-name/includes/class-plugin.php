@@ -120,6 +120,17 @@ class Prefix_Plugin {
 	 */
 	public function define_hook_or_initialize() {
 
+		//Admin enqueue script
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
+	}
+
+	/**
+	 * Enqueue admin assets.
+	 *
+	 * @return void
+	 */
+	public function admin_scripts() {
+		wp_enqueue_script( 'plugin-name-admin', PREFIX_ASSETS_URL . 'js/admin.min.js', array( 'jquery' ), null, true );
 	}
 
 }

@@ -21,7 +21,7 @@ function js() {
 
 // Will compile sass to css and minify.
 function css() {
-    return src("./assets/src/sass/admin.scss", {sourcemaps: true})
+    return src("./assets/src/sass/*.scss", {sourcemaps: true})
         .pipe(sass())
         .pipe(autoprefixer({
             cascade: false,

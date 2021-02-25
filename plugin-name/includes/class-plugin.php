@@ -76,17 +76,6 @@ class Uprefix_Plugin {
 	}
 
 	/**
-	 * Include files.
-	 *
-	 * @return void
-	 */
-	private function load_dependencies() {
-
-		
-
-	}
-
-	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
 	 * @since    1.0.0
@@ -110,6 +99,15 @@ class Uprefix_Plugin {
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
+
+	}
+
+	/**
+	 * Include files.
+	 *
+	 * @return void
+	 */
+	private function load_dependencies() {
 
 	}
 

@@ -11,7 +11,7 @@
  *
  * @since      1.0.0
  */
-class Prefix_Plugin {
+class Uprefix_Plugin {
 
 	/**
 	 * The unique identifier of this plugin.
@@ -41,8 +41,8 @@ class Prefix_Plugin {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'PREFIX_VERSION' ) ) {
-			$this->version = PREFIX_VERSION;
+		if ( defined( 'UPREFIX_VERSION' ) ) {
+			$this->version = UPREFIX_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
@@ -130,8 +130,8 @@ class Prefix_Plugin {
 	 * @return void
 	 */
 	public function admin_scripts() {
-		wp_enqueue_script( 'plugin-name-admin', PREFIX_ASSETS_URL . 'js/admin.min.js', array( 'jquery' ), null, true );
-		wp_enqueue_style( 'plugin-name-admin', PREFIX_ASSETS_URL . 'css/admin.min.css', array(), null );
+		wp_enqueue_script( 'plugin-name-admin', UPREFIX_ASSETS_URL . 'js/admin.min.js', array( 'jquery' ), null, true );
+		wp_enqueue_style( 'plugin-name-admin', UPREFIX_ASSETS_URL . 'css/admin.min.css', array(), null );
 	}
 
 }

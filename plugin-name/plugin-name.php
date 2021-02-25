@@ -35,31 +35,31 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'PREFIX_VERSION', '1.0.0' );
+define( 'UPREFIX_VERSION', '1.0.0' );
 
 /**
  * Define plugin path and plugin url.
  */
-define( 'PREFIX_PATH', plugin_dir_path( __FILE__ ) );
-define( 'PREFIX_URL', plugin_dir_url( __FILE__ ) );
-define( 'PREFIX_ASSETS_URL', plugin_dir_url( __FILE__ ) . 'assets/dist/' );
+define( 'UPREFIX_PATH', plugin_dir_path( __FILE__ ) );
+define( 'UPREFIX_URL', plugin_dir_url( __FILE__ ) );
+define( 'UPREFIX_ASSETS_URL', plugin_dir_url( __FILE__ ) . 'assets/dist/' );
 
 /**
  * The code that runs during plugin activation.
  */
-function prefix_activate() {
+function uprefix_activate() {
 	
 }
 
 /**
  * The code that runs during plugin deactivation.
  */
-function prefix_deactivate() {
+function uprefix_deactivate() {
 	
 }
 
-register_activation_hook( __FILE__, 'prefix_activate' );
-register_deactivation_hook( __FILE__, 'prefix_deactivate' );
+register_activation_hook( __FILE__, 'uprefix_activate' );
+register_deactivation_hook( __FILE__, 'uprefix_deactivate' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -76,9 +76,9 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-plugin.php';
  *
  * @since    1.0.0
  */
-function prefix_run() {
+function uprefix_run() {
 
-	$plugin = new Prefix_Plugin();
+	$plugin = new Uprefix_Plugin();
 
 }
-prefix_run();
+uprefix_run();

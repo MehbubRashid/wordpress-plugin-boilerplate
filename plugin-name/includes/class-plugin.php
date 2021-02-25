@@ -131,6 +131,7 @@ class Prefix_Plugin {
 	 */
 	public function admin_scripts() {
 		wp_enqueue_script( 'plugin-name-admin', PREFIX_ASSETS_URL . 'js/admin.min.js', array( 'jquery' ), null, true );
+		wp_enqueue_style( 'plugin-name-admin', PREFIX_ASSETS_URL . 'css/admin.min.css', array(), null );
 	}
 
 }

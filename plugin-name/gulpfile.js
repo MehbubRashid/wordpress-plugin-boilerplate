@@ -43,9 +43,15 @@ function compress() {
 function watchTask() {
     watch('./assets/src/sass/**/*.scss', css);
     watch('./assets/src/js/**/*.js', js)
-        .on('change', browserSync.reload);
-    watch('./**/*.php')
-    .on('change', browserSync.reload);
+        .on('change', () => {
+            console.log('Javascript changed');
+            browserSync.reload();
+        });
+    watch(['./**/*.php', '!./**/index.asset.php'])
+    .on('change', () => {
+        console.log('PHP changed');
+        browserSync.reload();
+    });
 };
 
 // Opens up the browser

@@ -42,7 +42,8 @@ define( 'UPREFIX_VERSION', '1.0.0' );
  */
 define( 'UPREFIX_PATH', plugin_dir_path( __FILE__ ) );
 define( 'UPREFIX_URL', plugin_dir_url( __FILE__ ) );
-define( 'UPREFIX_ASSETS_URL', plugin_dir_url( __FILE__ ) . 'assets/dist/' );
+define( 'UPREFIX_ASSETS_URL', plugin_dir_url( __FILE__ ) . 'assets/' );
+define( 'UPREFIX_ASSETS_VERSION', time() );
 
 /**
  * The code that runs during plugin activation.

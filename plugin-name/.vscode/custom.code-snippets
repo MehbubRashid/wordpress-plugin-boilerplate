@@ -12,7 +12,7 @@
 		"body": [
 			"plugin-name"
 		],
-		"description": "Print textdomains in translation functions"
+		"description": "Prints textdomains in translation functions"
 	},
 	"Phpcs escape comment": {
 		"scope": "php,javascript",

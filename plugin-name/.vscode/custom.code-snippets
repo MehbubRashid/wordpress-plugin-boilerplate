@@ -13,5 +13,21 @@
 			"plugin-name"
 		],
 		"description": "Print textdomains in translation functions"
+	},
+	"Phpcs escape comment": {
+		"scope": "php,javascript",
+		"prefix": "phpcsescape",
+		"body": [
+			"// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped"
+		],
+		"description": "Adds a phpcs comment"
+	},
+	"Phpcs sanitize comment": {
+		"scope": "php,javascript",
+		"prefix": "phpcssanitize",
+		"body": [
+			"// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized"
+		],
+		"description": "Adds a phpcs comment"
 	}
 }

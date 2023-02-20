@@ -34,7 +34,7 @@ function css() {
 
 // Will create a  zip file for plugin which will not contain unnecessary files.
 function compress() {
-    return src([ '**/*', '!node_modules/**', '!./*.json', '!*.gitignore', '!gulpfile.js', '!.git/**' ]) 
+    return src([ '**/*', '!**/node_modules/**', '!./*.json', '!*.gitignore', '!gulpfile.js', '!.git/**' ]) 
     .pipe(zip('plugin-name.zip'))
     .pipe(dest('./'));
 }

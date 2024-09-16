@@ -128,8 +128,9 @@ class Uprefix_Plugin {
 	 * @return void
 	 */
 	public function admin_scripts() {
-		wp_enqueue_script( 'plugin-name-admin', UPREFIX_ASSETS_URL . 'dist/js/admin.min.js', array( 'jquery' ), UPREFIX_ASSETS_VERSION, true );
-		wp_enqueue_style( 'plugin-name-admin', UPREFIX_ASSETS_URL . 'dist/css/admin.min.css', array(), UPREFIX_ASSETS_VERSION );
+		// Remove the following comments if you want to enqueue admin css and js.
+		// wp_enqueue_script( 'plugin-name-admin', UPREFIX_ASSETS_URL . 'dist/js/admin.min.js', array( 'jquery' ), UPREFIX_ASSETS_VERSION, true );
+		// wp_enqueue_style( 'plugin-name-admin', UPREFIX_ASSETS_URL . 'dist/css/admin.min.css', array(), UPREFIX_ASSETS_VERSION );
 	}
 
 }

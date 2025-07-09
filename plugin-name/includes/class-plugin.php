@@ -137,8 +137,8 @@ class Uprefix_Plugin {
 			// for css, it will instantly refresh the dom without a browser reload. 🔥
 		// 4. Uncomment the following code to finally enqueue the output files from the `dist` folder.
 
-		// wp_enqueue_script( 'funding-calculator-admin', FCAL_ASSETS_URL . 'dist/js/admin.min.js', array( 'jquery' ), FCAL_ASSETS_VERSION, true );
-		// wp_enqueue_style( 'funding-calculator-admin', FCAL_ASSETS_URL . 'dist/css/admin.min.css', array(), FCAL_ASSETS_VERSION );
+		// wp_enqueue_script( 'plugin-name-admin', UPREFIX_ASSETS_URL . 'dist/js/admin.min.js', array( 'jquery' ), UPREFIX_ASSETS_VERSION, true );
+		// wp_enqueue_style( 'plugin-name-admin', UPREFIX_ASSETS_URL . 'dist/css/admin.min.css', array(), UPREFIX_ASSETS_VERSION );
 	}
 
 }

@@ -128,9 +128,17 @@ class Uprefix_Plugin {
 	 * @return void
 	 */
 	public function admin_scripts() {
-		// Remove the following comments if you want to enqueue admin css and js.
-		// wp_enqueue_script( 'plugin-name-admin', UPREFIX_ASSETS_URL . 'dist/js/admin.min.js', array( 'jquery' ), UPREFIX_ASSETS_VERSION, true );
-		// wp_enqueue_style( 'plugin-name-admin', UPREFIX_ASSETS_URL . 'dist/css/admin.min.css', array(), UPREFIX_ASSETS_VERSION );
+		// 1. Install necessary npm packages by running `npm install`.
+		// 2. Create your css files like so: `assets/src/sass/filename.scss`
+			// and javascript files like so: `assets/src/js/filename.js`
+		// 3. Run `gulp` and it will start watching for changes, 
+			// compile/minify the files as necessary in the `dist` folder ,
+			// and live reload the browser.
+			// for css, it will instantly refresh the dom without a browser reload. 🔥
+		// 4. Uncomment the following code to finally enqueue the output files from the `dist` folder.
+
+		// wp_enqueue_script( 'funding-calculator-admin', FCAL_ASSETS_URL . 'dist/js/admin.min.js', array( 'jquery' ), FCAL_ASSETS_VERSION, true );
+		// wp_enqueue_style( 'funding-calculator-admin', FCAL_ASSETS_URL . 'dist/css/admin.min.css', array(), FCAL_ASSETS_VERSION );
 	}
 
 }

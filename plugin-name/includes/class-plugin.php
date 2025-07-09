@@ -132,7 +132,7 @@ class Uprefix_Plugin {
 		// 2. Create your css files like so: `assets/src/sass/filename.scss`
 			// and javascript files like so: `assets/src/js/filename.js`
 		// 3. Run `gulp` and it will start watching for changes, 
-			// compile/minify the files as necessary in the `dist` folder ,
+			// compile/minify the files as necessary in the `dist` folder,
 			// and live reload the browser.
 			// for css, it will instantly refresh the dom without a browser reload. 🔥
 		// 4. Uncomment the following code to finally enqueue the output files from the `dist` folder.
